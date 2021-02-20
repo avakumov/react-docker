@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t avakumov/react-docker -f Dockerfile.dev .
 scripts:
-  - docker run avakumov/react-docker npm run test -- --coverage
+  - docker run -e CI=true avakumov/react-docker npm run test -- --coverage
